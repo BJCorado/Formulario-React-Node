@@ -49,7 +49,7 @@ const handleSubmit = async (e) => {
   }
 
   try {
-    await axios.post("http://localhost:5000/save", formData);
+    await axios.post("https://formulario-backend-xns6.onrender.com/save", formData);
     setMessage("Datos guardados correctamente.");
     setShowMessage(true);
     setTimeout(() => setShowMessage(false), 4000);
@@ -64,7 +64,7 @@ const handleSubmit = async (e) => {
 
   return (
     <div className="container">
-      <h1>Update Information</h1>
+      <h1>Actualización De información</h1>
       <form onSubmit={handleSubmit}>
         <label>Nombre*:</label>
         <input name="firstName" value={formData.firstName} onChange={handleChange} />
