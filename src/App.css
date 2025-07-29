@@ -1,0 +1,105 @@
+/* Fondo general y fuente clásica */
+body {
+  background-color: #f4f4f4;
+  font-family: "Georgia", serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* Contenedor principal del formulario */
+.container {
+  background-color: #fffff8;
+  padding: 30px 40px;
+  border-radius: 8px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+  width: 400px;
+}
+
+/* Título */
+h2 {
+  text-align: center;
+  font-size: 26px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Subtítulo */
+p {
+  text-align: center;
+  font-style: italic;
+  margin-bottom: 25px;
+  color: #444;
+}
+
+/* Etiquetas e inputs */
+label {
+  font-weight: bold;
+  display: block;
+  margin-top: 10px;
+}
+
+input[type="text"],
+select {
+  width: 100%;
+  padding: 6px 8px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-family: "Georgia", serif;
+  font-size: 14px;
+}
+
+/* Radios y checkboxes agrupados horizontalmente */
+.gender-options,
+.car-options {
+  display: flex;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.checkbox-group {
+  margin: 10px 0;
+}
+
+/* Botón */
+button[type="submit"] {
+  background-color: #f0f0f0;
+  border: 1px solid #999;
+  padding: 6px 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Georgia", serif;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #e0e0e0;
+}
+
+/* Mensaje de éxito */
+.success-message {
+  color: green;
+  text-align: center;
+  margin-top: 15px;
+  font-weight: bold;
+  background-color: #e6ffe6;
+  border: 1px solid #66cc66;
+  padding: 10px;
+  border-radius: 5px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Animación para el mensaje */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
