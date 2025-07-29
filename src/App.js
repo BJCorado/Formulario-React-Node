@@ -87,12 +87,13 @@ const handleSubmit = async (e) => {
           <label><input type="radio" name="gender" value="No estoy seguro" onChange={handleChange} /> No Estoy Seguro</label>
         </div>
 
-        <label>Estado De Residencia*:</label>
+        <label>Departamento De Residencia*:</label>
         <select name="state" value={formData.state} onChange={handleChange}>
           <option value="">-- Select --</option>
-          <option value="Kansas">Kansas</option>
-          <option value="California">California</option>
-          <option value="Texas">Texas</option>
+          <option value="Guatemala">Guatemala</option>
+          <option value="Jutiapa">Jutiapa</option>
+          <option value="Escuintla">Escuintla</option>
+          <option value="Santa Rosa">Santa Rosa</option>
         </select>
 
         <label>
