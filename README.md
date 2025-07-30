@@ -74,7 +74,7 @@ Desde el frontend, al enviar el formulario, se hace un POST a: https://formulari
 ## 📥 Descargar archivo Excel
 Para descargar el Excel actualizado con los datos ingresados:
 
-`https://formulario-backend-xns6.onrender.com/descargar-excel`
+https://formulario-backend-xns6.onrender.com/descargar-excel
 
 Esto permite descargar el archivo generado automáticamente con todas las filas nuevas.
 
