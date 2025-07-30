@@ -1,70 +1,96 @@
-# Getting Started with Create React App
+# 📋 Formulario con Guardado en Excel
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este proyecto consiste en un formulario web desarrollado con **React** que permite enviar la información ingresada a un **backend en Node.js**. El backend guarda los datos en un archivo de **Excel (.xlsx)** utilizando la librería `exceljs`, y permite descargar el archivo desde un enlace.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Tecnologías utilizadas
 
-### `npm start`
+### 🧩 Frontend
+- React.js
+- CSS (estilos personalizados)
+- Axios (para enviar datos al backend)
+- Vercel (para despliegue gratuito)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### ⚙️ Backend
+- Node.js + Express
+- exceljs (para manipular archivos Excel)
+- CORS + body-parser
+- Render (para despliegue gratuito del backend)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 📁 Proyecto
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+El proyecto está dividido en dos repositorios:
 
-### `npm run build`
+### 🔀 Repositorios
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Repositorio 1:** Todo el proyecto está en este repositorio (Repositorio actual), donde coexisten frontend y backend.
+- **Repositorio 2 separado :** Para su funcionamiento en línea (Render), la carpeta `server/` se subió a un repositorio **independiente** Repositorio: `https://github.com/BJCorado/Formulario-Backend`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🚀 Clonar y Ejecutar el Proyecto
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 1. Clonar el Repositorio
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+git clone https://github.com/BJCorado/Formulario-React-Node
+cd formulario
+```
+### 2. Ejecutar el Frontend (React)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Ubicado en la raíz del proyecto
+```bash
+npm install
+npm start
+```
+Esto iniciará la aplicación React en http://localhost:3000
 
-## Learn More
+### 3. Ejecutar el Backend (Node.js)
+```bash
+# Moverse a la carpeta del backend
+cd server
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Instalar dependencias
+npm install
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# Iniciar el servidor
+node index.js
+```
+---
+## 🌐 Despliegue en producción
 
-### Code Splitting
+Frontend: desplegado en Vercel: `formulario-bj-corado.vercel.app`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Backend: desplegado en Render: `https://formulario-backend-xns6.onrender.com/`
 
-### Analyzing the Bundle Size
+## ✉️ Enviar datos al backend
+Desde el frontend, al enviar el formulario, se hace un POST a: https://formulario-backend-xns6.onrender.com/save
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 📥 Descargar archivo Excel
+Para descargar el Excel actualizado con los datos ingresados:
 
-### Making a Progressive Web App
+`https://formulario-backend-xns6.onrender.com/descargar-excel`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Esto permite descargar el archivo generado automáticamente con todas las filas nuevas.
 
-### Advanced Configuration
+## 🧑‍💻 ¿Cómo hacer que el Excel se guarde localmente?
+Si deseas que el archivo Excel se genere y actualice en tu computadora local en lugar del servidor, modifica la ruta del archivo en excelWriter.js.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Cambia esto:
 
-### Deployment
+const filePath = path.join(__dirname, "Datos_Formulario.xlsx");
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Por una ruta local absoluta como esta de ejemplo:
 
-### `npm run build` fails to minify
+const filePath = "C:\\Users\\TuUsuario\\Desktop\\Datos\\Datos_Formulario.xlsx";
+🔒 Asegúrate de que la carpeta exista y tengas permisos de escritura.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 📝 Notas adicionales
+El backend crea o actualiza el archivo Excel en el servidor de Render. Si deseas mantener una copia local, puedes cambiar la ruta como se explicó anteriormente.
+
+Actualmente no se utiliza autenticación ni base de datos, por lo que los datos solo se almacenan en el archivo Excel.
