@@ -52,6 +52,16 @@ const handleSubmit = async (e) => {
     await axios.post("https://formulario-backend-xns6.onrender.com/save", formData);
     setMessage("Datos guardados correctamente.");
     setShowMessage(true);
+    //Limpiar los campos del formulario:
+    setFormData({
+      firstName: "",
+      lastName: "",
+      favoriteSport: "",
+      gender: "",
+      state: "",
+      isAdult: false,
+      cars: [],
+    });
     setTimeout(() => setShowMessage(false), 4000);
   } catch (error) {
     console.error("Error:", error);
