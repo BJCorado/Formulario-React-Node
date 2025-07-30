@@ -75,6 +75,11 @@ const handleSubmit = async (e) => {
   return (
     <div className="container">
       <h1>Actualización De información</h1>
+            {showMessage && (
+  <div className="success-message">
+    {message}
+  </div>
+)}
       <form onSubmit={handleSubmit}>
         <label>Nombre*:</label>
         <input name="firstName" value={formData.firstName} onChange={handleChange} />
@@ -123,11 +128,6 @@ const handleSubmit = async (e) => {
 
         <button type="submit">Guardar Cambios</button>
       </form>
-      {showMessage && (
-  <div className="success-message">
-    {message}
-  </div>
-)}
 
     </div>
   );
