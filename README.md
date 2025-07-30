@@ -27,7 +27,7 @@ El proyecto está dividido en dos repositorios:
 ### 🔀 Repositorios
 
 - **Repositorio 1:** Todo el proyecto está en este repositorio (Repositorio actual), donde coexisten frontend y backend.
-- **Repositorio 2 separado :** Para su funcionamiento en línea (Render), la carpeta `server/` se subió a un repositorio **independiente** Repositorio: `https://github.com/BJCorado/Formulario-Backend`
+- **Repositorio 2 separado :** Para su funcionamiento en línea (Render), la carpeta "server" se subió a un repositorio **independiente** Repositorio: `https://github.com/BJCorado/Formulario-Backend`
 
 
 
