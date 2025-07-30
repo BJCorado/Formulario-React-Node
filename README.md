@@ -64,9 +64,9 @@ node index.js
 ---
 ## 🌐 Despliegue en producción
 
-Frontend: desplegado en Vercel: `formulario-bj-corado.vercel.app`
+Frontend: desplegado en Vercel: formulario-bj-corado.vercel.app
 
-Backend: desplegado en Render: `https://formulario-backend-xns6.onrender.com/`
+Backend: desplegado en Render: https://formulario-backend-xns6.onrender.com/
 
 ## ✉️ Enviar datos al backend
 Desde el frontend, al enviar el formulario, se hace un POST a: https://formulario-backend-xns6.onrender.com/save
