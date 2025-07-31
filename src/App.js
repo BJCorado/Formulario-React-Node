@@ -113,7 +113,7 @@ const handleSubmit = async (e) => {
 
         <label>
           <input type="checkbox" name="isAdult" checked={formData.isAdult} onChange={handleChange} />
-          21 or older
+          21 años o más
         </label>
 
         <label>Modelo de Autos:</label>
